@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="finalProject">
+        <svg id="drawing" width="300" height="300" style="border: 2px solid greenyellow;">
+
+        </svg>
+        <div id="showcaseValues">
+            <h2>MODE: <span id="modeShowcase">create</span></h2>
+            Number of sides: 
+            <p id="sidesShowcase"></p>
+            Perimeter: 
+            <p id="circumferenceShowcase"></p>
+            Rotation: 
+            <p id="rotateShowcase"></p>
+            x-coordinate: 
+            <p id="vertXShowcase"></p>
+            y-coordinate: 
+            <p id="vertYShowcase"></p>
+        </div>
+        <div id="buttonsContainer">
+            <button id="change" class="buttons"></button>
+            <button id="changeAll" class="buttons"></button>
+            <button id="delete" class="buttons"></button>
+            <button id="deleteAll" class="buttons"></button>
+            <button id="clear" class="buttons"></button>
+        </div>
+    </div>
+    <div id="controlContainer">
+        <div id="modeSelectors">
+            <button id="createMode">Create</button>
+            <button id="selectMode">Select</button>
+        </div>
+        <input type="text" id="sides" value="4" style="width: 50px; margin-left: 80px; margin-bottom: 70px">
+        <input type="text" id="circumference" value="200" style="width: 100px; margin-left: 110px">
+        <input type="text" id="vertX" style="width: 100px; margin-top: 130px; margin-left: 50px">
+        <input type="text" id="vertY" style="width: 100px; margin-top: 6px; margin-left: 50px">
+        <input type="range" id="rotate" value="0" min="0" max="100" style="width: 50px; margin-top: 30px; margin-left:40px;">
+        <input type="color" id="colorSelect" value="#ff0000"> 
+    </div>
+
+
+    <script src="main.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            height: fit-content;
+            background-image: url("background.jpg"); 
+            background-size: cover;    
+        }
+
+        #finalProject {
+            display: flex;
+            background-size: contain;
+            background-image: url("project.png");
+            height: 55rem;
+            width: 60rem;
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 50px;
+            flex-wrap: wrap;
+            border-radius: 200px;
+            border: 5px solid grey;
+        }
+
+        #drawing {
+            margin: 200px 0 0 200px;
+        }
+
+        #controlContainer {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 500px;
+            margin-top: 200px;
+            margin-left: 920px;
+            position: absolute;
+            background-image: url("app.png");
+            background-size: cover;
+            height: 360px;
+            border: 2px solid grey;
+        }
+
+        #showcaseValues {
+            display: flex;
+            flex-direction: column;
+            width: 130px;
+            height: 300px;
+            padding: 10px 5px;
+            border: 2px solid greenyellow;
+            margin-top: 200px;
+            color: greenyellow;
+            font-weight: 300;
+            font-size: 12px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            line-height: 12px;
+        }
+
+        #inputValues {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px;
+        }
+
+        #buttonsContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 auto 30px 160px;
+            height: fit-content;
+            width: 460px;
+        }
+
+        .buttons {
+            width: 45px;
+            height: 30px;
+            border: none;
+            background: transparent;
+        }
+
+        #modeSelectors {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 125px;
+            margin-left: 60px;
+            margin-bottom: 58px;
+            width: 30%;
+        }
+
+        #colorSelect {
+            margin-top: 28px;
+            margin-left:20px;
+        }
+    </style>
+</body>
+</html>
